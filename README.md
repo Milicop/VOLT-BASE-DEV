@@ -23,6 +23,7 @@ Volt is a Linux distribution inspired by Omarchy, featuring a custom-built deskt
 - **Highly Customizable**: Extensive theming and configuration options
 
 ### Core Capabilities
+- **Ractor Package Manager**: Built on the powerful Pacman package manager for fast and reliable software management
 - **Rolling Release Model**: Always up-to-date with the latest software
 - **Minimalist Base**: Install only what you need
 - **Developer Friendly**: Comprehensive tooling and development packages
@@ -38,14 +39,7 @@ Volt is a Linux distribution inspired by Omarchy, featuring a custom-built deskt
 
 ### Quick Start
 
-1. Download the latest ISO from the releases page
-2. Create a bootable USB drive:
-   ```bash
-   sudo dd if=volt-latest.iso of=/dev/sdX bs=4M status=progress
-   ```
-3. Boot from the USB and follow the installation wizard
-4. Reboot and enjoy Volt!
-
+No possible installation
 ## Documentation
 
 Comprehensive documentation is available covering:
