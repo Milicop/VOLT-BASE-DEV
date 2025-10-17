@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Set install mode to online since boot.sh is used for curl installations
-export OMARCHY_ONLINE_INSTALL=true
-
 ansi_art='
 ██╗   ██╗ ██████╗ ██╗  ████████╗
 ██║   ██║██╔═══██╗██║  ╚══██╔══╝
@@ -11,7 +8,7 @@ ansi_art='
  ╚████╔╝ ╚██████╔╝███████╗██║   
   ╚═══╝   ╚═════╝ ╚══════╝╚═╝   
                                  
-⚡ Powered by Raptor Package Manager
+⚡ Powered by Ractor Package Manager
 React Apps at Lightning Speed
 '
 
@@ -19,13 +16,13 @@ clear
 echo -e "\n$ansi_art\n"
 
 sudo pacman -Syu --noconfirm --needed git
-# Install raptor package manager
+# Install ractor package manager
 wget https://raw.githubusercontent.com/CyberHuman-bot/Raptor/refs/heads/main/raptor.sh
 chmod +x raptor.sh
-sudo mv raptor.sh /usr/local/bin/raptor
+sudo mv raptor.sh /usr/local/bin/ractor
 
 # Use custom repo if specified, otherwise default to CyberHuman-bot/volt
-VOLT_REPO="${VOLT_REPO:-CyberHuman-bot/Volt}"
+VOLT_REPO="${VOLT_REPO:-Milicop/VOLT-BASE-DEV}"
 
 echo -e "\n⚡ Cloning Volt from: https://github.com/${VOLT_REPO}.git"
 rm -rf ~/.local/share/volt/
