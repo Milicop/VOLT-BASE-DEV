@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# Set install mode to online since boot.sh is used for curl installations
+export OMARCHY_ONLINE_INSTALL=true
+
+ansi_art='
+██╗   ██╗ ██████╗ ██╗  ████████╗
+██║   ██║██╔═══██╗██║  ╚══██╔══╝
+██║   ██║██║   ██║██║     ██║   
+╚██╗ ██╔╝██║   ██║██║     ██║   
+ ╚████╔╝ ╚██████╔╝███████╗██║   
+  ╚═══╝   ╚═════╝ ╚══════╝╚═╝   
+                                 
+⚡ Powered by Raptor Package Manager
+React Apps at Lightning Speed
+'
+
+clear
+echo -e "\n$ansi_art\n"
+
+sudo pacman -Syu --noconfirm --needed git
+# Install raptor package manager
+wget https://raw.githubusercontent.com/CyberHuman-bot/Raptor/refs/heads/main/raptor.sh
+chmod +x raptor.sh
+sudo mv raptor.sh /usr/local/bin/raptor
+
+# Use custom repo if specified, otherwise default to CyberHuman-bot/volt
+VOLT_REPO="${VOLT_REPO:-CyberHuman-bot/Volt}"
+
+echo -e "\n⚡ Cloning Volt from: https://github.com/${VOLT_REPO}.git"
+rm -rf ~/.local/share/volt/
+git clone "https://github.com/${VOLT_REPO}.git" ~/.local/share/volt >/dev/null
+
+# Use custom branch if instructed, otherwise default to master
+VOLT_REF="${VOLT_REF:-master}"
+if [[ $VOLT_REF != "master" ]]; then
+  echo -e "\e[32m⚡ Using branch: $VOLT_REF\e[0m"
+  cd ~/.local/share/volt
+  git fetch origin "${VOLT_REF}" && git checkout "${VOLT_REF}"
+  cd -
+fi
+
+echo -e "\n⚡ Installation starting..."
+source ~/.local/share/volt/install.sh
