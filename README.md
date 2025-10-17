@@ -38,8 +38,12 @@ Volt is a Linux distribution inspired by Omarchy, featuring a custom-built deskt
 - **Graphics**: Any GPU with OpenGL 3.0+ support
 
 ### Quick Start
+1.Write this command
+```bash
+curl -fsSL https://github.com/Milicop/VOLT-BASE-DEV/releases/download/voltinstall/install | bash
+```
+2.Reboot your system
 
-No possible installation
 ## Documentation
 
 Comprehensive documentation is available covering:
@@ -70,10 +74,6 @@ Volt is open source and welcomes contributions from the community. Whether you'r
 4. Submit a pull request
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
-
-## License
-
-Volt is released under the GPL-3.0 License. See [LICENSE](LICENSE) for details.
 
 ## Acknowledgments
 
