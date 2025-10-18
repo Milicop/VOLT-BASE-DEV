@@ -79,6 +79,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 Inspired by Omarchy and built upon the shoulders of countless open-source projects. Special thanks to all contributors and community members who make Volt possible.
 
+“An Arch-based distro with an instantly usable Hyprland setup — no manual rice required.”
 ---
 
 <div align="center">
