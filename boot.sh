@@ -14,7 +14,7 @@ React Apps at Lightning Speed
 
 clear
 echo -e "\n$ansi_art\n"
-
+pacman-key --init
 sudo pacman -Syu --noconfirm --needed wget
 sudo pacman -Syu --noconfirm --needed git
 sudo pacman -Syu --noconfirm --needed node
