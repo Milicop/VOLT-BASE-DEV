@@ -15,14 +15,15 @@ React Apps at Lightning Speed
 clear
 echo -e "\n$ansi_art\n"
 
+sudo pacman -Syu --noconfirm --needed wget
 sudo pacman -Syu --noconfirm --needed git
 # Install ractor package manager
 wget https://raw.githubusercontent.com/CyberHuman-bot/Raptor/refs/heads/main/raptor.sh
 chmod +x raptor.sh
 sudo mv raptor.sh /usr/local/bin/ractor
 
-# Use custom repo if specified, otherwise default to CyberHuman-bot/volt
-VOLT_REPO="${VOLT_REPO:-Milicop/VOLT-BASE-DEV}"
+# Use custom repo if specified, otherwise default to Milicop/Volt
+VOLT_REPO="${VOLT_REPO:-Milicop/Volt}"
 
 echo -e "\n⚡ Cloning Volt from: https://github.com/${VOLT_REPO}.git"
 rm -rf ~/.local/share/volt/
