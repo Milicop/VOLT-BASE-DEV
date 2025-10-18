@@ -4,7 +4,7 @@ import time
 
 class WelcomeForm(npyscreen.ActionForm):
     def create(self):
-        self.add(npyscreen.FixedText, value="Welcome to MyLinux Installer", editable=False)
+        self.add(npyscreen.FixedText, value="Welcome to Volt Installer", editable=False)
         self.add(npyscreen.FixedText, value="", editable=False)
         self.add(npyscreen.FixedText, value="This installer will guide you through the installation process.", editable=False)
         self.add(npyscreen.FixedText, value="Press OK to continue or Cancel to exit.", editable=False)
@@ -17,7 +17,7 @@ class WelcomeForm(npyscreen.ActionForm):
 
 class SystemConfigForm(npyscreen.ActionForm):
     def create(self):
-        self.add(npyscreen.TitleText, name="Hostname:", value="mylinux")
+        self.add(npyscreen.TitleText, name="Hostname:", value="Volt")
         self.add(npyscreen.TitleText, name="Username:", value="")
         self.add(npyscreen.TitlePassword, name="Password:", value="")
         self.add(npyscreen.TitlePassword, name="Confirm Password:", value="")
@@ -101,7 +101,7 @@ class ConfirmForm(npyscreen.ActionForm):
 
 class InstallForm(npyscreen.FormBaseNew):
     def create(self):
-        self.add(npyscreen.FixedText, value="Installing MyLinux...", editable=False)
+        self.add(npyscreen.FixedText, value="Installing Volt...", editable=False)
         self.add(npyscreen.FixedText, value="", editable=False)
         self.status = self.add(npyscreen.FixedText, value="Starting...", editable=False)
         self.progress = self.add(npyscreen.TitleSlider, name="Progress:", out_of=100, value=0)
@@ -140,7 +140,7 @@ class FinishForm(npyscreen.ActionForm):
     def create(self):
         self.add(npyscreen.FixedText, value="Installation Complete!", editable=False)
         self.add(npyscreen.FixedText, value="", editable=False)
-        self.add(npyscreen.FixedText, value="MyLinux has been successfully installed.", editable=False)
+        self.add(npyscreen.FixedText, value="Volt has been successfully installed.", editable=False)
         self.add(npyscreen.FixedText, value="Please reboot your system to start using it.", editable=False)
         self.add(npyscreen.FixedText, value="", editable=False)
         self.add(npyscreen.FixedText, value="Press OK to exit the installer.", editable=False)
@@ -161,7 +161,7 @@ class InstallerApp(npyscreen.NPSAppManaged):
         self.packages = []
         
         # Register forms - MAIN is the default starting form
-        self.addForm("MAIN", WelcomeForm, name="MyLinux Installer")
+        self.addForm("MAIN", WelcomeForm, name="Volt Installer")
         self.addForm("SYSTEM", SystemConfigForm, name="System Configuration")
         self.addForm("DISK", DiskSelectionForm, name="Disk Selection")
         self.addForm("PACKAGES", PackageSelectionForm, name="Package Selection")
