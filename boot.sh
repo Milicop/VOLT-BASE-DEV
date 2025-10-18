@@ -23,7 +23,7 @@ sudo pacman -Syu --noconfirm --needed jq
 # Install ractor package manager
 wget https://raw.githubusercontent.com/CyberHuman-bot/Ractor/refs/heads/main/ractor.sh
 chmod +x ractor.sh
-sudo mv raptor.sh /usr/local/bin/ractor
+sudo mv ractor.sh /usr/local/bin/ractor
 
 # Use custom repo if specified, otherwise default to Milicop/Volt
 VOLT_REPO="${VOLT_REPO:-Milicop/Volt}"
