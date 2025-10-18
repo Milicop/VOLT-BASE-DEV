@@ -39,8 +39,8 @@ fi
 clear
 echo -e "${BLUE}"
 echo "╔═══════════════════════════════════════╗"
-echo "║         Volt Installation             ║"
-echo "║   Hyprland + Waybar + Walker         ║"
+echo "║          Volt Installation            ║"
+echo "║       Hyprland + Waybar + Walker      ║"
 echo "╚═══════════════════════════════════════╝"
 echo -e "${NC}"
 echo ""
