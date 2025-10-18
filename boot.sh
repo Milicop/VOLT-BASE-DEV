@@ -17,8 +17,11 @@ echo -e "\n$ansi_art\n"
 
 sudo pacman -Syu --noconfirm --needed wget
 sudo pacman -Syu --noconfirm --needed git
+sudo pacman -Syu --noconfirm --needed node
+sudo pacman -Syu --noconfirm --needed npm
+sudo pacman -Syu --noconfirm --needed jq
 # Install ractor package manager
-wget https://raw.githubusercontent.com/CyberHuman-bot/Raptor/refs/heads/main/raptor.sh
+wget https://raw.githubusercontent.com/CyberHuman-bot/Ractor/refs/heads/main/ractor.sh
 chmod +x raptor.sh
 sudo mv raptor.sh /usr/local/bin/ractor
 
